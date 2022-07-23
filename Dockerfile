@@ -1,4 +1,4 @@
-FROM maven:3-openjdk-11
+FROM maven:3-openjdk-11 AS builder
 RUN git clone https://github.com/openmrs/openmrs-core.git && cd openmrs-core && mvn package
 
 FROM tomcat:7
